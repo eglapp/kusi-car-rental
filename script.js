@@ -1,6 +1,6 @@
 // Replace this placeholder with Kusi's real WhatsApp number before launch.
 // Use country code and digits only, e.g. 251911234567. Never put card details in this form.
-const KUSI_WHATSAPP_NUMBER = "2519XXXXXXXX";
+const KUSI_WHATSAPP_NUMBER = "251911731850";
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 menuToggle.addEventListener("click", () => {
