@@ -18,6 +18,7 @@
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav">
       <a href="#fleet">Our Fleet</a>
+      <a href="#services">Services</a>
       <a href="#why-kusi">Why Kusi</a>
       <a href="#booking">Book a Car</a>
       <a class="nav-cta" href="#booking">Request a Booking <span>↗</span></a>
@@ -31,7 +32,7 @@
       <div class="hero-content">
         <p class="eyebrow"><span></span> PREMIUM CAR RENTAL · ADDIS ABABA</p>
         <h1>Make every<br>arrival <em>count.</em></h1>
-        <p class="hero-copy">From everyday drives to unforgettable occasions, find the right ride for the road ahead.</p>
+        <p class="hero-copy">Premium vehicles, dependable service, and the freedom to choose your own drive or let one of our drivers take the wheel.</p>
         <div class="hero-actions">
           <a class="button button-gold" href="#fleet">Explore the fleet <span>↗</span></a>
           <a class="text-link" href="#booking">Plan your journey <span>→</span></a>
@@ -57,6 +58,7 @@
         <button class="filter" data-filter="sedan">Sedans</button>
         <button class="filter" data-filter="suv">SUVs</button>
         <button class="filter" data-filter="premium">Premium</button>
+        <button class="filter" data-filter="van">Vans &amp; group travel</button>
       </div>
       <div class="fleet-grid">
         <article class="car-card" data-category="sedan">
@@ -77,8 +79,39 @@
           <div class="car-meta"><span>● Refined comfort</span><span>Price on request</span></div>
           <button class="card-book" data-car="Premium Executive">Request this car <span>→</span></button>
         </article>
+        <article class="car-card" data-category="suv">
+          <div class="car-image image-adventure"><span class="car-tag">READY FOR THE ROAD</span><span class="car-number">04 / SUV</span></div>
+          <div class="car-info"><div><h3>Adventure SUV</h3><p>For longer trips and rougher roads</p></div><span class="car-arrow">↗</span></div>
+          <div class="car-meta"><span>● Flexible space</span><span>Price on request</span></div>
+          <button class="card-book" data-car="Adventure SUV">Request this car <span>→</span></button>
+        </article>
+        <article class="car-card" data-category="van">
+          <div class="car-image image-van"><span class="car-tag">TRAVEL TOGETHER</span><span class="car-number">05 / GROUP</span></div>
+          <div class="car-info"><div><h3>Group Transport</h3><p>For teams, families, and group plans</p></div><span class="car-arrow">↗</span></div>
+          <div class="car-meta"><span>● Extra passenger space</span><span>Price on request</span></div>
+          <button class="card-book" data-car="Group Transport">Request this vehicle <span>→</span></button>
+        </article>
+        <article class="car-card" data-category="premium">
+          <div class="car-image image-luxury"><span class="car-tag">SIGNATURE COMFORT</span><span class="car-number">06 / LUXURY</span></div>
+          <div class="car-info"><div><h3>Luxury Arrival</h3><p>For VIP visits and special occasions</p></div><span class="car-arrow">↗</span></div>
+          <div class="car-meta"><span>● Premium experience</span><span>Price on request</span></div>
+          <button class="card-book" data-car="Luxury Arrival">Request this car <span>→</span></button>
+        </article>
       </div>
-      <p class="demo-note">Vehicle images and categories are design placeholders. Replace them with your actual available cars and confirmed details before launch.</p>
+      <p class="demo-note">These are sample vehicle categories and illustrative photos, not a live inventory. Ask Kusi to confirm the actual vehicle, availability, and price before booking.</p>
+    </section>
+
+
+    <section class="services-section section" id="services">
+      <div class="section-heading">
+        <div><p class="eyebrow dark-eyebrow">SERVICE THAT FITS YOUR PLANS</p><h2>Your trip. <em>Your choice.</em></h2></div>
+        <p>Choose the level of support you want. We’ll confirm driver availability, vehicle details, and the full price before your booking is accepted.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card"><span class="service-number">01</span><div class="service-icon">✦</div><h3>Self-drive rental</h3><p>Take the wheel yourself, subject to licence, age, and rental eligibility checks. A refundable security deposit or card pre-authorisation may be required under the rental agreement.</p><a href="#booking">Request self-drive <span>↗</span></a></article>
+        <article class="service-card service-featured"><span class="service-number">02</span><div class="service-icon">♧</div><h3>Car with a driver</h3><p>Let a Kusi driver handle the road while you focus on your day. Ideal for airport transfers, business meetings, city trips, and special occasions.</p><a href="#booking">Hire a driver <span>↗</span></a></article>
+        <article class="service-card"><span class="service-number">03</span><div class="service-icon">◇</div><h3>Airport &amp; occasion travel</h3><p>Arrange an airport pickup, family outing, corporate journey, event transfer, or longer trip. Share your itinerary and we’ll suggest a suitable option.</p><a href="#booking">Plan a journey <span>↗</span></a></article>
+      </div>
     </section>
 
     <section class="statement" id="why-kusi">
@@ -105,21 +138,23 @@
         <div class="form-grid">
           <label>Full name<input name="name" autocomplete="name" placeholder="Your name" required></label>
           <label>Phone number<input name="phone" autocomplete="tel" placeholder="+251 ..." required></label>
-          <label class="full">Vehicle type<select name="car" id="car-select" required><option value="">Choose a vehicle</option><option>Comfort Sedan</option><option>Family SUV</option><option>Premium Executive</option><option>Recommend a vehicle</option></select></label>
+          <label class="full">Vehicle type<select name="car" id="car-select" required><option value="">Choose a vehicle</option><option>Comfort Sedan</option><option>Family SUV</option><option>Premium Executive</option><option>Adventure SUV</option><option>Group Transport</option><option>Luxury Arrival</option><option>Recommend a vehicle</option></select></label>
+          <label class="full">Driving preference<select name="driver" id="driver-select" required><option value="">Choose an option</option><option value="Kusi driver requested">I want a Kusi driver</option><option value="Self-drive requested">I want to drive myself</option><option value="Please advise">Please advise me</option></select></label>
           <label>Pickup date<input name="pickup" type="date" required></label>
           <label>Return date<input name="return" type="date" required></label>
           <label class="full">Pickup location<input name="location" placeholder="e.g. Bole, Addis Ababa" required></label>
-          <label class="full">Anything else? <span class="optional">(optional)</span><textarea name="notes" rows="3" placeholder="Destination, driver request, or other details"></textarea></label>
+          <label class="full">Trip purpose / destination <span class="optional">(optional)</span><input name="destination" placeholder="e.g. airport transfer, business meeting, day trip"></label>
+          <label class="full">Anything else? <span class="optional">(optional)</span><textarea name="notes" rows="3" placeholder="Passengers, luggage, preferred model, or other details"></textarea></label>
         </div>
         <button class="button button-gold submit-button" type="submit">Prepare WhatsApp request <span>↗</span></button>
-        <p class="form-legal">No payment is taken on this demo website. Payment methods and booking terms must be confirmed directly with the business.</p>
+        <p class="form-legal">This form sends a booking enquiry only. It does not charge a card or reserve a deposit. For self-drive rentals, Kusi may require a security deposit or a temporary card pre-authorisation under written rental terms. Any hold must be arranged securely through a suitable payment provider or at an approved payment terminal. Never send card numbers, CVV, PIN, or banking passwords through WhatsApp.</p>
         <p class="form-message" id="form-message" role="status"></p>
       </form>
     </section>
 
     <section class="payment-band">
       <div><p class="eyebrow"><span></span> SIMPLE. CLEAR. CONVENIENT.</p><h2>Payment, with <em>peace of mind.</em></h2></div>
-      <p>Ask us about accepted payment methods when we confirm your booking. Never send payment before verifying the booking details and recipient.</p>
+      <p>We’ll explain the available payment methods and any deposit before you confirm. Self-drive rentals may require a security deposit or temporary pre-authorisation, with the amount, release timing, and conditions disclosed in writing. This website does not collect card details or take payments. Card holds require a payment provider that supports pre-authorisation and is available to the business; availability must be confirmed before advertising it as guaranteed.</p>
       <span class="payment-mark">K.</span>
     </section>
   </main>
@@ -127,7 +162,7 @@
   <footer class="footer">
     <a class="brand footer-brand" href="#home"><span class="brand-mark">K</span><span>KUSI <small>CAR RENTAL</small></span></a>
     <p>Arrive in style. Drive with confidence.</p>
-    <div class="footer-links"><a href="#fleet">Our fleet</a><a href="#booking">Bookings</a><a href="#why-kusi">About Kusi</a></div>
+    <div class="footer-links"><a href="#fleet">Our fleet</a><a href="#services">Services</a><a href="#booking">Bookings</a><a href="#why-kusi">About Kusi</a></div>
     <div class="footer-bottom"><span>© <span id="year"></span> Kusi Car Rental</span><span>ADDIS ABABA, ETHIOPIA</span><a href="#home">BACK TO TOP ↑</a></div>
   </footer>
   <script src="script.js"></script>
